@@ -5,6 +5,7 @@ MySQL_Binlog_Parse_to_sql
 单表导出
 
 #工具运行步骤
+
       1.binlog—format= row
       
       2.mysqlbinlog --no-defaults --base64-output=decode-rows -v -v mysql-bin.00000x >mysql-bin.00000x.sql
@@ -12,9 +13,13 @@ MySQL_Binlog_Parse_to_sql
       3.python script_name.py -u user -p password -f mysql-bin.00000x.sql -b binlog_to_sql.sql
       
 #工具HELP
+
       ===Author:GuiJiaoQi&XuYou
-      ===For Example:python ts.py -u user -p password -f mysql-bin.00000x.sql -b binlog_to_sql.sql    =======
-      ===		 :python ts.py -u user -p password -t tb_name -f mysql-bin.00000x.sql -a single_tb_.sql =======
+      
+      ===For Example:
+            python ts.py -u user -p password -f mysql-bin.00000x.sql -b binlog_to_sql.sql    
+            python ts.py -u user -p password -t tb_name -f mysql-bin.00000x.sql -a single_tb_.sql 
+
 
 Usage: ts.py [options]
 
