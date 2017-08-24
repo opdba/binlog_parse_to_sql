@@ -1,7 +1,6 @@
 # binlog_parse_to_sql
 
 binlog python解析
-
 MySQL_Binlog_Parse_to_sql
 单表导出
 
